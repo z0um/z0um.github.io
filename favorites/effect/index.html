@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <title>图片轮播</title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div class="carousel" @mouseenter="enter" @mouseleave="leave">
+        <!-- <h1>  123123</h1>
+        <span v-if = "seen">now you see me</span>
+        <ol>
+            <li v-for = "todo in todos">
+                
+            </li>
+        </ol> -->
+        <transition-group tag="ul" name="image" enter-active-class="animated lightSpeedIn" leave-active-class="animated lightSpeedOut">
+            <li v-for="(image,index) in img" :key="index" v-show="index === mark">
+                <a href="javascript:;" target="_blank" rel="noopener">
+                    <img :src="image">
+                </a>
+            </li>
+        </transition-group>
+        <div class="bullet">
+            <span v-for="(item,index) in img.length" :class="{'active':index === mark}" @click="change(index)" :key="index"></span>
+        </div>
+        <div class="switch">
+            <span class="prev" @click="prev">&lt;</span>
+            <span class="next" @click="next">&gt;</span>
+        </div>
+    </div>
+</body>
+<script src="js/index.js"></script>
+</html>
