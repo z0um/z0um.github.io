@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>大明攻词</title>
+  <title></title>
   
   
   <link href="/z0um.github.io/atom.xml" rel="self"/>
@@ -8,11 +8,6 @@
   <link href="https://github.com/z0um/z0um.github.io.git/"/>
   <updated>2020-05-31T13:45:42.494Z</updated>
   <id>https://github.com/z0um/z0um.github.io.git/</id>
-  
-  <author>
-    <name>大明攻词</name>
-    
-  </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
