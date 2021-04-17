@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.0.2/dist/echarts.min.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 1200px;height:800px; margin:0 auto;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+    title: {
+        text: '高考评价体系'
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data: ['满分', '你的得分', '同班', '同校', '同层次']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['学习掌握', '实践探索', '思维方法']
+    },
+    yAxis: {
+        type: ''
+    },
+    series: [
+        {
+            name: '满分',
+            type: 'line',
+            stack: '总量',
+            data: [50, 10, 100]
+        },
+        {
+            name: '你的得分',
+            type: 'line',
+            stack: '总量',
+            data: [40, 8, 80]
+        },
+        {
+            name: '同班',
+            type: 'line',
+            stack: '总量',
+            data: [45, 6, 70]
+        },
+        {
+            name: '同校',
+            type: 'line',
+            stack: '总量',
+            data: [42, 5, 68]
+        },
+        {
+            name: '同层次',
+            type: 'line',
+            stack: '总量',
+            data: [39, 7, 78]
+        }
+    ]
+};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
