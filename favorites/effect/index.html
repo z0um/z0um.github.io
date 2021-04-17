@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="UTF-8">
     <title>图片轮播</title>
     <link rel="stylesheet" href="css/animate.min.css">
@@ -20,8 +20,8 @@
             </li>
         </ol> -->
         <transition-group tag="ul" name="image" enter-active-class="animated lightSpeedIn" leave-active-class="animated lightSpeedOut">
-            <li v-for="(image,index) in img" :key="index" v-show="index === mark">
-                <a href="javascript:;" target="_blank" rel="noopener">
+            <li v-for='(image,index) in img' :key='index' v-show="index === mark">
+                <a href="javascript:;">
                     <img :src="image">
                 </a>
             </li>
