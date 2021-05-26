@@ -20,7 +20,7 @@
             </li>
         </ol> -->
         <transition-group tag="ul" name="image" enter-active-class="animated lightSpeedIn" leave-active-class="animated lightSpeedOut">
-            <li v-for='(image,index) in img' :key='index' v-show="index === mark">
+            <li v-for="(image,index) in img" :key="index" v-show="index === mark">
                 <a href="javascript:;">
                     <img :src="image">
                 </a>
